@@ -6,7 +6,8 @@ This is a repository for POA service project
  * Cloud based development environment:
    - <b>Colab Notebook</b>
    - <b>Github Codespaces</b>
-      Building out project scaffold:
+
+     Building out project scaffold:
       * Makefile
       * Dockerfile
       * Library
