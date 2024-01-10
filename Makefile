@@ -5,7 +5,7 @@ format:
 	# format code
 	black *.py src/*.py
 lint:
-	# flake8 or pylint 
+	pylint --disable=R,C *.py src/*.py
 test:
 	# test
 one-test:
