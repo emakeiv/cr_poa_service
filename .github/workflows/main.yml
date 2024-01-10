@@ -1,0 +1,20 @@
+name: POA_SERVICE BUILD AND DEPLOY (2024/01)
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.10.12
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.10.12
+    - name: Install dependencies
+      run: |
+        make install
+    - name: Build
+      run: |
+        make build
+    - name: Deploy
+      run: |
+        #make deploy
