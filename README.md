@@ -10,9 +10,11 @@ This is a repository for POA service project
    - <b>Github Codespaces</b>
 
      Building out project scaffold:
+      * Setup Continous integration
       * Makefile
       * Dockerfile
       * Library
+      * Unit and Integration tests
       * Command Line Tool
       * Microservice
    
