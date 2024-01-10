@@ -2,12 +2,13 @@
 This is a repository for POA service project
 
 ## Project scaffold:
-  - source code
-  - test code
-  - Makefile
-  - Dockerfile
-  - requirements.txt
-  - [IAC]
+
+ * Cloud base development environment:
+   - <b>Colab Notebook</b>
+   - <b>Github Codespaces</b>
+   - <b>AWS CloudShell</b>
+   - <b>AWS Cloud9 (fully fledged cloud based development environment)</b>
+
 
 ## Command-Line tools
 ## Microservices
