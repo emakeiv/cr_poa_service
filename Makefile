@@ -7,7 +7,7 @@ format:
 lint:
 	pylint --disable=R,C *.py src/*.py
 test:
-	# test
+	python -m pytest -vv --cov=src tst/*/*_tests.py
 one-test:
 	# single_test
 	# python -m pytest --v tests/hello_test.py::test_my_model
