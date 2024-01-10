@@ -12,6 +12,7 @@ This is a repository for POA service project
       * Dockerfile
       * Library
       * Command Line Tool
+      * Microservice
    
    - <b>AWS CloudShell</b>
    - <b>AWS Cloud9 (fully fledged cloud based development environment)</b>
