@@ -1,3 +1,5 @@
+[![POA_SERVICE BUILD AND DEPLOY (2024/01)](https://github.com/emakeiv/cr_poa_service/actions/workflows/main.yml/badge.svg)](https://github.com/emakeiv/cr_poa_service/actions/workflows/main.yml)
+
 # power-of-attorney-service
 This is a repository for POA service project
 
