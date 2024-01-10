@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import fire
-from src.enter import wiki
+from src import enter
 
 if __name__ == "__main__":
-    fire.Fire(wiki)
+    fire.Fire(enter)
