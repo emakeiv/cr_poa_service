@@ -1,6 +1,8 @@
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
+ocr-setup:
+	./scripts/ocr_engine_provision.sh
 format:
 	# format code
 	black *.py src/*.py
