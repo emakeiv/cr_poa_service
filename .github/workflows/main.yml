@@ -15,6 +15,7 @@ jobs:
     - name: Install Tesseract OCR
       run: |
         chmod +x ./scripts/ocr_engine_provision.sh
+        
         ./scripts/ocr_engine_provision.sh
     - name: Lint with pylint
       run: |
