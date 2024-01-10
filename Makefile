@@ -3,6 +3,7 @@ install:
 		pip install -r requirements.txt
 format:
 	# format code
+	black *.py src/*.py
 lint:
 	# flake8 or pylint 
 test:
