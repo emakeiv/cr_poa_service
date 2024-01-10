@@ -3,7 +3,7 @@ This is a repository for POA service project
 
 ## Project scaffold:
 
- * Cloud base development environment:
+ * Cloud based development environment:
    - <b>Colab Notebook</b>
    - <b>Github Codespaces</b>
    - <b>AWS CloudShell</b>
