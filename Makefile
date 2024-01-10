@@ -14,6 +14,8 @@ debug:
 	# debug
 debugthree:
 	# python -m pytest --vv --pdb --maxfail=4 # drop to PDB for first three failures
+build:
+	# build
 deploy:
 	# deploy
 	
