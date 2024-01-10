@@ -6,6 +6,12 @@ This is a repository for POA service project
  * Cloud based development environment:
    - <b>Colab Notebook</b>
    - <b>Github Codespaces</b>
+      Building out project scaffold:
+      * Makefile
+      * Dockerfile
+      * Library
+      * Command Line Tool
+   
    - <b>AWS CloudShell</b>
    - <b>AWS Cloud9 (fully fledged cloud based development environment)</b>
 
