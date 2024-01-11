@@ -1,7 +1,7 @@
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
-ocr-setup:
+lib-setup:
 	./scripts/ocr_engine_provision.sh
 format:
 	# format code
@@ -28,4 +28,4 @@ deploy:
 	docker tag cp_poa_service_entry:latest 605822515341.dkr.ecr.eu-north-1.amazonaws.com/cp_poa_service_entry:latest
 	docker push 605822515341.dkr.ecr.eu-north-1.amazonaws.com/cp_poa_service_entry:latest
 
-all: install lint test deploy
+all: install lib-setup lint test deploy
