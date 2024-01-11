@@ -18,7 +18,10 @@ debug:
 debugthree:
 	# python -m pytest --vv --pdb --maxfail=4 # drop to PDB for first three failures
 build:
-	# build
+	docker build -t cr_poa_service:latest .
+run:
+	# run container
+	# docker run -p 8080:8080 cr_poa_service:latest
 deploy:
 	# deploy
 	
