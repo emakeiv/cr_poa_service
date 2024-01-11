@@ -23,6 +23,9 @@ run:
 	# run container
 	# docker run -p 8080:8080 cr_poa_service:latest
 deploy:
-	# deploy
-	
-all: install lint test format deploys
+	aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 605822515341.dkr.ecr.eu-north-1.amazonaws.com
+	docker build -t cp_poa_service_entry .
+	docker tag cp_poa_service_entry:latest 605822515341.dkr.ecr.eu-north-1.amazonaws.com/cp_poa_service_entry:latest
+	docker push 605822515341.dkr.ecr.eu-north-1.amazonaws.com/cp_poa_service_entry:latest
+
+all: install lint test deploy

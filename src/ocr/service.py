@@ -10,7 +10,7 @@ class OpticalCharacterRecognitionService():
 
     def process_image(self, file_content):
         """
-        Process an image file and extract text using Tesseract OCR.
+        process an image file and extract text using OCR.
         """
         image = Image.open(io.BytesIO(file_content))
         text = pytesseract.image_to_string(image)
