@@ -12,13 +12,13 @@ RC repository for power of attorney authorization service project scaffold
    - <b>Github Codespaces</b>
    - <b>AWS Cloud9</b>
 
-  * Continous integration / Continous delivery
+ * Continous integration / Continous delivery
    - <b>Makefile</b>
    - <b>Dockerfile</b>
    - <b>AWS buildspec</b>
    - <b>Unit tests</b>
 
-  * Microservice components
+ * Microservice components
    - <b>OCR library</b>
    - <b>NLP library</b>
    - <b>CLI tool</b>
