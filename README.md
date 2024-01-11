@@ -4,6 +4,7 @@
 
 # power-of-attorney-service
 RC repository for power of attorney authorization service project scaffold
+
 ![IMAGE](system_design.jpg)
 
 ## Root structure:
