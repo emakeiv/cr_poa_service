@@ -1,4 +1,6 @@
-[![POA_SERVICE BUILD AND DEPLOY (2024/01)](https://github.com/emakeiv/cr_poa_service/actions/workflows/main.yml/badge.svg)](https://github.com/emakeiv/cr_poa_service/actions/workflows/main.yml)
+[![POA_SERVICE LOCAL_BUILD (2024/01)](https://github.com/emakeiv/cr_poa_service/actions/workflows/main.yml/badge.svg)](https://github.com/emakeiv/cr_poa_service/actions/workflows/main.yml)
+
+[![AWS_BUILD_AND_DEPLOY](https://codebuild.eu-north-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoieGtiVm4rbzVDOTlpeFFqWGFTZzZJMTlxclNGbjU0K29WOXJOSmN4bjFkZVk0dWowU2w4MW8ramxrd0lUeEZYYUtCVFpTYTVDV3BMOTl6ZzV3SFpiNmlzPSIsIml2UGFyYW1ldGVyU3BlYyI6IkdZRmhWd1A4N0xoSlp6c0giLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
 # power-of-attorney-service
 This is a repository for POA service project
