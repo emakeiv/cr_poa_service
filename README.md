@@ -7,7 +7,7 @@ RC repository for power of attorney authorization service project scaffold
 
 # rephraser
 
-![IMAGE](system_design.jpg.jpg)
+![IMAGE](system_design.jpg)
 
 ## Root structure:
 
