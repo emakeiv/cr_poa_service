@@ -3,27 +3,23 @@
 [![AWS_BUILD_AND_DEPLOY](https://codebuild.eu-north-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoieGtiVm4rbzVDOTlpeFFqWGFTZzZJMTlxclNGbjU0K29WOXJOSmN4bjFkZVk0dWowU2w4MW8ramxrd0lUeEZYYUtCVFpTYTVDV3BMOTl6ZzV3SFpiNmlzPSIsIml2UGFyYW1ldGVyU3BlYyI6IkdZRmhWd1A4N0xoSlp6c0giLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
 # power-of-attorney-service
-This is a repository for POA service project
+RC repository for power of attorney authorization service project scaffold
 
-## Project scaffold:
+## Root structure:
 
- * Cloud based development environment:
+ * CB development environment:
    - <b>Colab Notebook</b>
    - <b>Github Codespaces</b>
+   - <b>AWS Cloud9</b>
 
-     Building out project scaffold:
-      * Setup Continous integration
-      * Makefile
-      * Dockerfile
-      * Library
-      * Unit and Integration tests
-      * Command Line Tool
-      * Microservice
-   
-   - <b>AWS CloudShell</b>
-   - <b>AWS Cloud9 (fully fledged cloud based development environment)</b>
+  * Continous integration / Continous delivery
+   - <b>Makefile</b>
+   - <b>Dockerfile</b>
+   - <b>AWS buildspec</b>
+   - <b>Unit tests</b>
 
-
-## Command-Line tools
-## Microservices
-## Containerized CD
+  * Microservice components
+   - <b>OCR library</b>
+   - <b>NLP library</b>
+   - <b>CLI tool</b>
+   - <b>REST API</b>
