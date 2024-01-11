@@ -5,6 +5,10 @@
 # power-of-attorney-service
 RC repository for power of attorney authorization service project scaffold
 
+# rephraser
+
+![IMAGE](system_design.jpg.jpg)
+
 ## Root structure:
 
  * CB development environment:
