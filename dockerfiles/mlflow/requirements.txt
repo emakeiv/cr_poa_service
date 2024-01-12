@@ -1,2 +1,3 @@
-mlflow==1.4.0
-boto3
+mlflow 
+boto3 
+psycopg2
