@@ -1,7 +1,7 @@
-import pytesseract
-from PIL import Image
 import io
+import pytesseract
 
+from PIL import Image
 
 class OpticalCharacterRecognitionService():
     
@@ -10,9 +10,13 @@ class OpticalCharacterRecognitionService():
 
     def process_image(self, file_content):
         """
-        process an image file and extract text using OCR.
+        process an image file and extract text using ocr engine.
         """
-        image = Image.open(io.BytesIO(file_content))
-        text = pytesseract.image_to_string(image)
+        try:
+            image = Image.open(io.BytesIO(file_content))
+            text = pytesseract.image_to_string(image, lang='lit')
+        except RuntimeError as error:
+            pass
+    
         return text.strip()
 
