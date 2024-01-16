@@ -5,8 +5,8 @@ from fastapi import (
 )
 from fastapi import UploadFile, File
 
-from api import dependencies
-from api.schemas.models import (
+from app.api import dependencies
+from app.api.schemas.models import (
     DocumentRequestSchema, 
     DocumentResponsetSchema
 )

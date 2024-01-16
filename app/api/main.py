@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from api.endpoints import documents, home
+from app.api.endpoints import documents, home
 
 def create_server():
     server = FastAPI(debug=True)

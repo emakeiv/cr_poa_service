@@ -13,3 +13,7 @@ alembic==1.13.1
 SQLAlchemy==2.0.25
 torch==1.12.0
 transformers==4.21.1
+spacy==3.7.2
+
+#LT-CORE-MD:
+#lt-core-news-md @ https://github.com/explosion/spacy-models/releases/download/lt_core_news_md-3.7.0/lt_core_news_md-3.7.0-py3-none-any.whl#sha256=bf793c09c47795fad7fe1a4d310a885abf6df662499ffa4be6102649782a4f82
