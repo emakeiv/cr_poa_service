@@ -11,7 +11,8 @@ from sqlalchemy import (
 class PowerOfAttorneyDocumentSample(Base):
     
     __tablename__ = 'igaliojimo_dokumentu_pavyzdziai'
-
+    __metadata__ = Base.metadata
+    
     id = Column(Integer, primary_key=True)
     document_name = Column(String)
     document_content = Column(String)

@@ -32,7 +32,7 @@ try:
     df = pd.read_excel(file_data)
    
 
-    engine = create_engine('postgresql://admin:admin@localhost/rc_poa_db')
+    engine = create_engine('postgresql://admin:admin@localhost/rc_poa_main_db')
     session = sessionmaker(bind=engine)()
 
     repository_registry = RepositoryRegistry(session)

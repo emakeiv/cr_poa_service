@@ -1,3 +1,5 @@
+import pandas as pd
+
 def convert_to_bool(value, true_value='T'):
     return value == true_value
 

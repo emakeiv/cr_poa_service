@@ -1,3 +1,5 @@
+from app.dal.models.base_model import Base
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import (
     Column, 
@@ -6,8 +8,6 @@ from sqlalchemy import (
     Boolean, 
     Date
 )
-
-Base = declarative_base()
 
 class ServisoKatalogas(Base):
     __tablename__ = 'serviso_katalogas'
@@ -29,10 +29,10 @@ class ServisoKatalogas(Base):
     def dict(self):
         return {
             "id": self.id,
-            "paslaugos_kodas": self.abbrev,
-            "institucijos_kodas": self.code,
-            "institucijos_pavadinimas": self.name,
-            "paslaugos_pavadinimas": self.currency,
+            "paslaugos_kodas": self.paslaugos_kodas,
+            "institucijos_kodas": self.institucijos_kodas,
+            "institucijos_pavadinimas": self.institucijos_pavadinimas,
+            "paslaugos_pavadinimas": self.paslaugos_pavadinimas,
             "paslaugos_tipas": self.paslaugos_tipas,
             "el_paslauga": self.el_paslauga,
             "tik_notarinis": self.tik_notarinis,
