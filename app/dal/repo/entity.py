@@ -29,7 +29,7 @@ class RepositoryEntity(Generic[T], IRepository[T]):
     def add(self, entity) -> T:
         # entity_model = self.entity(**kwargs)
         self.session.add(entity)
-        self.session.commit()
+        self.commit()
         #return entity_model
 
     def update(self, entity_id: int, **kwargs) -> Optional[T]:
@@ -38,6 +38,7 @@ class RepositoryEntity(Generic[T], IRepository[T]):
         if entity_model:
             for key, value in kwargs.items():
                 setattr(entity_model, key, value)
+            self.commit()     
             return entity_model.dict()
         return None
 
@@ -46,8 +47,15 @@ class RepositoryEntity(Generic[T], IRepository[T]):
             self.entity).filter_by(id=entity_id).first()
         if entity_model:
             self.session.delete(entity_model)
-            self.session.commit()
+            self.commit()
 
     def bulk_insert(self, records: List[dict]) -> None:
         self.session.bulk_insert_mappings(self.entity, records)
-        self.session.commit()
+        
+    def commit(self):
+        try:
+            self.session.commit()
+        except Exception as e:
+            self.session.rollback()
+            raise e   
+    

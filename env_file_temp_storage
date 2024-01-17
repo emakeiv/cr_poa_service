@@ -1,6 +1,12 @@
 POSTGRES_USER=admin
 POSTGRES_PASSWORD=admin
-POSTGRES_MAIN_DB=main_db_storage
+POSTGES_DB=main_db_storage
+PGDATA=/data/postgres
 
 PGADMIN_DEFAULT_EMAIL=admin
 PGADMIN_DEFAULT_PASSWORD=admin
+
+AWS_ACCESS_KEY_ID=aws_admin
+AWS_SECRET_ACCESS_KEY=aws_admin
+
+MLFLOW_DB=mlflow_db

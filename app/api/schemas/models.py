@@ -8,4 +8,5 @@ class DocumentRequestSchema(BaseModel):
 class DocumentResponsetSchema(BaseModel):
     id: int
     document_name: str
+    processed_document_content: str
     processed_date: datetime
