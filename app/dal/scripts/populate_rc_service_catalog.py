@@ -39,7 +39,7 @@ try:
     repository_registry.add('serviso_katalogo_repo', ServisoKatalogasRepository)
     if not df.empty:
         records = []
-        poa_doc_sample_repo = repository_registry.get('serviso_katalogo_repo')
+        service_catalog_repo = repository_registry.get('serviso_katalogo_repo')
         for index, row in df.iterrows():
             try:
                 record = ServisoKatalogas(
@@ -62,7 +62,7 @@ try:
         
         if records:
             try:
-                poa_doc_sample_repo.bulk_insert(records)
+                service_catalog_repo.bulk_insert(records)
             except Exception as e:
                 print(f"An error occurred adding recrods to database: {e}")
 

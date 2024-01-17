@@ -16,7 +16,8 @@ class OpticalCharacterRecognitionService():
             image = Image.open(io.BytesIO(file_content))
             text = pytesseract.image_to_string(image, lang='lit')
         except RuntimeError as error:
-            pass
+            print(f"OCR processing error: {error}")
+            return None
     
         return text.strip()
 

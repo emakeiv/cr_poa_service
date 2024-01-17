@@ -29,6 +29,7 @@ poa_doc_sample_repo = repository_registry.get('poa_doc_sample_repo')
 
 try:
     objects = s3_client.list_objects(Bucket=bucket_name)['Contents']
+    records = []
     for obj in objects:
         file_name = obj['Key']
         file_obj = s3_client.get_object(Bucket=bucket_name, Key=file_name)
@@ -36,13 +37,22 @@ try:
 
 
         ocr_text = ocr_service.process_image(file_data.getvalue())
-        record = PowerOfAttorneyDocumentSample(
-            document_name=file_name, 
-            document_content=ocr_text,
-            processed_date=datetime.now().date(),
-            )
-        poa_doc_sample_repo.add(record)
-    session.commit()
+        if ocr_text is not None:
+            record = PowerOfAttorneyDocumentSample(
+                document_name=file_name, 
+                document_content=ocr_text,
+                processed_date=datetime.now().date(),
+                )
+            entry = record.dict()
+            print(f"adding formatted record: {entry}")
+            records.append(entry)
+    
+    poa_doc_sample_repo.add(record)
+    if records:
+        try:
+            poa_doc_sample_repo.bulk_insert(records)
+        except Exception as e:
+            print(f"An error occurred adding recrods to database: {e}")
 
 except Exception as e:
     print(f"An error occurred: {e}")
