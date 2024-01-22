@@ -37,7 +37,7 @@ async def process_document(
 async def get_documents(request: Request):
 
         try:
-            poa_doc_sample_repo = request.app.repositories.get('poa_doc_sample_repo')
+            poa_doc_sample_repo = request.app.repositories.get('serviso_katalogo_repo')
             documents = poa_doc_sample_repo.list(limit=5) 
             return documents
         except Exception as e:

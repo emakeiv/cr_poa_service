@@ -51,7 +51,8 @@ class RepositoryEntity(Generic[T], IRepository[T]):
 
     def bulk_insert(self, records: List[dict]) -> None:
         self.session.bulk_insert_mappings(self.entity, records)
-        
+        print(f"bulk insert completed for {len(records)} records")
+
     def commit(self):
         try:
             self.session.commit()

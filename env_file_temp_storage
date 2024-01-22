@@ -1,6 +1,6 @@
 POSTGRES_USER=admin
 POSTGRES_PASSWORD=admin
-POSTGES_DB=main_db_storage
+POSTGES_DB=main_db
 PGDATA=/data/postgres
 
 PGADMIN_DEFAULT_EMAIL=admin

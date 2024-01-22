@@ -160,6 +160,8 @@ cython_debug/
 #.idea/
 
 # S3 
+minio
+minio/*
 minio/.minio.sys/*
 .minio.sys/*
 *.meta

@@ -9,6 +9,7 @@ from alembic import context
 from app.dal.models.base_model import Base
 from app.dal.models.service_catalog_model import *
 from app.dal.models.power_of_attorney_model import *
+from app.dal.models.other_document_model import *
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config

@@ -41,6 +41,7 @@ try:
         records = []
         service_catalog_repo = repository_registry.get('serviso_katalogo_repo')
         for index, row in df.iterrows():
+
             try:
                 record = ServisoKatalogas(
                     id=row['Nr.'],
@@ -56,15 +57,18 @@ try:
                     galioja_nuo=pd.to_datetime(row['Galioja nuo']).date(),
                     galioja_iki=convert_to_date(row['Galioja iki']),
                 )
-                records.append(record.dict())
+                #print(f"appending record: {row['Nr.']}")
+                #records.append(record.dict())
+                service_catalog_repo.add(record)
             except Exception as e:
                     print(f"An error occurred adding record to the list: {e}")
         
-        if records:
-            try:
-                service_catalog_repo.bulk_insert(records)
-            except Exception as e:
-                print(f"An error occurred adding recrods to database: {e}")
+        # if records:
+        #     try:
+        #         print(f"bulk inserting {len(records)} records")
+        #         service_catalog_repo.bulk_insert(records)
+        #     except Exception as e:
+        #         print(f"An error occurred adding recrods to database: {e}")
 
 except Exception as e:
     print(f"An error occurred populating_rc_service_catalog records: {e}")
