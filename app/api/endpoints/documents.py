@@ -13,12 +13,17 @@ from app.api.schemas.models import (
     DocumentResponsetSchema
 )
 
+from app.nlp.pre_process.data_prep import (
+      normalize_text, 
+      remove_stopwords_and_lemmatize
+      )
+
 from app.dal.repo.registry import RepositoryRegistry
 from app.dal.repo.impl import PowerOfAttorneyDocumentSampleRepository
 
 router = APIRouter()
 
-@router.post("/send-documents", tags=[""], response_model=DocumentResponsetSchema)
+@router.post("/ocr-service")
 async def process_document(
     file: UploadFile = File(...),
     ocr_service = Depends(dependencies.get_ocr_service)
@@ -29,11 +34,13 @@ async def process_document(
     try:
         content = await file.read()
         text = ocr_service.process_image(content)
+        #norm_text = normalize_text(text)
+        #final_text = remove_stopwords_and_lemmatize(norm_text)
         return {"text": text}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-@router.get("/get-documents")
+@router.get("/get-poa-services")
 async def get_documents(request: Request):
 
         try:

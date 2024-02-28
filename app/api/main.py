@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from fastapi import FastAPI
-from app.api.endpoints import documents, home
+from app.api.endpoints import documents, home, model
 
 from app.dal.repo.registry import RepositoryRegistry
 from app.dal.repo.impl import PowerOfAttorneyDocumentSampleRepository, ServisoKatalogasRepository
@@ -20,6 +20,7 @@ def create_server(repositories=None):
     server = FastAPI(debug=True)
     server.include_router(home.router)
     server.include_router(documents.router)
+    server.include_router(model.router)
     server.repositories = repositories
     return server
 

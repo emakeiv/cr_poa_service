@@ -1,9 +1,5 @@
 import string
 import spacy
-# from spacy.lang.lt import Lithuanian
-# from spacy.lang.lt.stop_words import STOP_WORDS
-# nlp_lt = Lithuanian()
-
 nlp_lt = spacy.load("lt_core_news_md")
 
 def normalize_text(text):
